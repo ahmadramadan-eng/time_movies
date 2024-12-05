@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #1F1F1F;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(to bottom, #5C5CFF, #7575ff);
+    border-radius: 10px;
+}
+body{
+    background: #1F1F1F;
+}
+/* start header */
+header{
+    width: 100%;
+    background:#2C2C2C ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+    position: fixed;
+    z-index: 999;
+}
+
+header .title a{
+    color: white;
+    font-size: 2em;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+header .navbar ul{
+    display: flex;
+    gap: 5em;
+    list-style: none;
+}
+header .navbar ul li a{
+    color: white;
+    text-transform: capitalize;
+    font-size: 1.2em;
+    transition: 0.5s;
+}
+header .navbar ul li a:hover{
+    color :#5C5CFF;
+}
+@media (max-width:1023px){
+    header .navbar ul{
+        gap: 3em;
+    }
+    .watch{
+        font-size: 20px;
+    }
+    .links{
+        font-size: 20px;
+        margin: 0 10px;
+    }
+}
+@media (max-width:740px){
+    body{
+        font-size: 14px;
+    }
+    header .navbar ul{
+        gap: 2em;
+    }
+}
+@media (max-width:650px){
+    body{
+        font-size: 12px;
+    }
+    header .navbar ul{
+        gap: 1em;
+    }
+}
+@media (max-width:425px){
+    body{
+        font-size: 9px;
+    }
+}
+/* end header */
+/* start intro */
+.intro {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right, #1F1F1F 20%, #1f1f1f82),
+    url(images/235860.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center left;
+    padding: 150px 5% 0px 5%;
+    text-align: center;
+    position: relative;
+}
+.intro .info{
+    width : 50%;
+    height: 300px;
+    margin: 0 5%;
+    position: absolute;
+    left: 0;
+    text-align: justify;
+    animation: slideUp 1.5s ease-out;
+    word-spacing: 1px;
+}
+.intro h2{
+    padding-bottom: 20px;
+    color: rgb(236, 236, 236);
+    font-size: 1.8em;
+    text-transform: capitalize;
+}
+.intro p{
+    color: rgb(236, 236, 236);
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 1.2em;
+    text-transform: capitalize;
+}
+.intro .info span{
+    color: #5C5CFF;
+}
+.watch {
+    width: 200px;
+    height: 70px;
+    background-color:#5C5CFF ;
+    position: absolute;
+    left: 10%;
+    top: calc( 18.75em + 2.5em);
+    border-radius: 20px;
+    padding-top: 20px;
+    transition: 0.7s;
+    animation: slideUp 1.5s ease-out;
+}
+.watch a{
+    color: white;
+    font-size: 25px;
+}
+.watch:hover{
+    background-color: #7575ff;
+    transform: scale(1.1);
+}
+
+.links{
+    width: 15%;
+    position: absolute;
+    left: 10%;
+    bottom: 20% ;
+    display: flex;
+    margin-top: 50px;
+}
+.links a{
+    color: white;
+    font-size: 35px;
+    margin: 20px;
+    transition: 0.5s;
+    animation: slideUp 1.5s ease-out;
+}
+.links a:hover{
+    color: #5C5CFF;
+}
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* end intro */
+/* start choose */
+.choose{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 100px auto;
+}
+.choose a{
+    background: #5C5CFF;
+    width: 150px;
+    height: 70px;
+    padding: 20px ;
+    margin: 20px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    font-size: 22px;
+    transition: 0.7s;
+    animation: slideUp 1.5s ease-out;
+}
+.choose a:hover{
+    background-color: #7575ff;
+    transform: scale(1.1);
+}
+/* end choose */
+/* start movies */
+.action , .drama ,.horror{
+    text-align: center;
+}
+.action h2 , .drama h2 , .horror h2, .series h2 , .contact h2{
+    color: #ffffff34;
+    font-size: 3.5em;
+    margin: 40px 0;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card{
+    background: #fff;
+    width: 20em;
+    height: 22em;
+    overflow: hidden;
+    border: 1px solid white;
+    margin: 35px 15px;
+    border-radius: 20px;
+    transition: 0.7s;
+}
+.card:hover{
+    box-shadow: 1px 7px 10px 1px #5C5CFF;
+    transform: translateY(-15px);
+    opacity: 0.9;
+}
+.imagecard img{
+    width: 100%;
+    height: 18em;
+}
+.contentcard{
+    height:3em ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1em;
+}
+.contentcard p{
+    font-size: 1.6em;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.contentcard a{
+    color: #5C5CFF;
+    font-size: 1.2em;
+    text-transform: capitalize;
+    font-weight: 500;
+    transition: 1s;
+}
+.contentcard a:hover{
+    color: #7575ff;
+    border-bottom:1px solid #7575ff;
+}
+/* end movies */
+/* start series */
+.series{
+    text-align: center;
+}
+.seriescard{
+    background: #fff;
+    width: 30em;
+    height: 18em;
+    overflow: hidden;
+    border: 1px solid white;
+    margin: 35px 15px;
+    border-radius: 20px;
+    transition: 0.7s;
+}
+.seriescard:hover{
+    box-shadow: 1px 7px 10px 1px #5C5CFF;
+    transform: translateY(-15px);
+    opacity: 0.9;
+}
+.seriesimagecard img{
+    width: 100%;
+    height: 14em;
+}
+/* end series */
+/* start contact */
+.contact{
+    text-align: center;
+}
+.contact .content .contactcard{
+    background: #fff;
+    width: 22em;
+    height: 15em;
+    margin: 35px 35px;
+    border-radius: 20px;
+    transition: 0.7s;
+}
+.contact .content .contactcard:hover{
+    box-shadow: 1px 7px 10px 1px #5C5CFF;
+    transform: translateY(-15px);
+}
+.contact .content .contactcard i{
+    font-size: 10em;
+    color: #5C5CFF;
+}
+.contact .content .contactcard p{
+    color: #1F1F1F;
+    font-size: 1.8em;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-top: 10px;
+}
+/* end contact */
+/* start footer */
+footer{
+    background-color:#3c3b3b ;
+    text-align: center;
+    padding: 2em;
+}
+footer p{
+    font-size: 1.5em;
+    color: #fff;
+}
+footer p span{
+    color: #5C5CFF;
+}
